@@ -1,7 +1,7 @@
 def all_thing_is_obj(object: any) -> int:
     object_type = type(object)
     
-    # Print the corresponding type name for each object type
+    # isinstance check the object that if its list or any kind of type specified
     if isinstance(object, list):
         print(f"List : {object_type}")
     elif isinstance(object, tuple):
@@ -11,13 +11,7 @@ def all_thing_is_obj(object: any) -> int:
     elif isinstance(object, dict):
         print(f"Dict : {object_type}")
     elif isinstance(object, str):
-        print(f"{object} is in the kitchen : {object_type}")
+        print(f"str : {object} is at 42 beirut : {object_type}")
     else:
         print("Type not found")
-    
-    # Return 42 at the end of the function
     return 42
-
-
-# from find_ft_type import all_thing_is_obj
-
