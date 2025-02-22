@@ -19,20 +19,5 @@ def all_thing_is_obj(object: any) -> int:
     return 42
 
 
-from find_ft_type import all_thing_is_obj
+# from find_ft_type import all_thing_is_obj
 
-ft_list = ["Hello", "tata!"]
-ft_tuple = ("Hello", "toto!")
-ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello": "titi!"}
-
-# Test the function with various object types
-all_thing_is_obj(ft_list)
-all_thing_is_obj(ft_tuple)
-all_thing_is_obj(ft_set)
-all_thing_is_obj(ft_dict)
-all_thing_is_obj("Brian")
-all_thing_is_obj("Toto")
-
-# Print the return value of calling the function with an integer
-print(all_thing_is_obj(10))
