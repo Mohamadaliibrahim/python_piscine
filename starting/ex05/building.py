@@ -1,15 +1,22 @@
 import sys
 
-def check_size():
+def the_exception():
+    arg = input("What is the text to count?\n")
+    ideas_start_here(arg)
+
+def check_size() -> bool:
+    if len(sys.argv) == 1:
+        the_exception()
+        return (False)
     if len(sys.argv) != 2:
         print("AssertionError: more than one argument is provided")
         sys.exit(1)
+    return (True)
 
-def is_it_punctuation(x) -> int:
-    return x in ['!', '?', '.', ',', ';', ':', '-', '(', ')', '"', "'"]
+def is_it_punctuation(x) -> bool:
+    return x in ['!', '?', '.', ',', ';', ':', '-', '(', ')', '"', "'", '/', '\\']
 
-def ideas_start_here():
-    arg = sys.argv[1]
+def ideas_start_here(arg):
     i = 0
     digit = 0
     upper = 0
@@ -30,16 +37,16 @@ def ideas_start_here():
             spaces += 1
         counter += 1
         i +=1
-    print(f"Digits: {digit}")
-    print(f"Uppercase letters: {upper}")
-    print(f"Lowercase letters: {lower}")
-    print(f"Punctuation marks: {punctuation}")
-    print(f"Spaces: {spaces}")
-    print(f"Total characters: {counter}")
+    print(f"The text containes {counter} characters: ")
+    print(f"{upper} uppercase letters")
+    print(f"{lower} lowercase letters")
+    print(f"{punctuation} punctuation marks")
+    print(f"{spaces} spaces")
+    print(f"{digit} digits")
 
 def main():
-    check_size()
-    ideas_start_here()
+    if check_size():
+        ideas_start_here(sys.argv[1])
 
         
 if __name__ == "__main__":
