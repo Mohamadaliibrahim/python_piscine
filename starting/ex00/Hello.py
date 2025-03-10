@@ -1,14 +1,22 @@
-ft_list = ["Hello", "World!"] # list of anytype and we can modify it, its ordered
-ft_tuple = ("Hello", "Lebanon!") # tuple of anytype and we can't modify it, its ordered
-ft_set = {"Beirut!", "Hello"} # A set is an unordered collection of unique elements.(you can add or remove element but you cant have duplicate values)
-ft_dict = {"Hello" : "42Beirut!"} # dictionary is unsoreted, key must be unique, you can add, remove or modify data..
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello": "titi!"}
 
-ordered_set = list(ft_set)
-if "Hello" in ordered_set:
-    ordered_set.remove("Hello")
-    ordered_set.insert(0, "Hello")
 
-ft_set = ordered_set
+print(ft_list)
+print(ft_tuple)
+print(ft_set)
+print(ft_dict)
+print("\n")
+
+ft_list[1] = "World!"
+ft_tuple = ("Hello", "Germany!")
+
+ft_set.remove("tutu!")
+ft_set.add("Heilbronn!")
+
+ft_dict["Hello"] = "42 Heilbronn!"
 
 print(ft_list)
 print(ft_tuple)

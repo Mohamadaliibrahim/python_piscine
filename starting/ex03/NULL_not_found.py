@@ -1,10 +1,8 @@
 import math
 
 def NULL_not_found(object: any) -> int:
-    # Check if the object is NoneType
     if object is None:
         print(f"Nothing: {object} <class 'NoneType'>")
-    # Check if the object is a float and is NaN (Not a Number)
     elif isinstance(object, float) and math.isnan(object):
         print(f"Garlic: {object} <class 'float'>")
 
@@ -25,3 +23,15 @@ def NULL_not_found(object: any) -> int:
         print("Type not Found")
         return 1
     return 0
+
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ''
+Fake = False
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))

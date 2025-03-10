@@ -1,5 +1,12 @@
 import sys
 
+
+def is_int(s):
+    if s[0] in ('-', '+'):
+        return s[1:].isdigit()
+    return s.isdigit()
+
+
 if len(sys.argv) != 2:
 
     print("AssertionError: more than one argument is provided")
@@ -7,7 +14,7 @@ if len(sys.argv) != 2:
 
 arg = sys.argv[1]
 
-if arg.isdigit():
+if is_int(arg):
 
     arg = int(arg)
     if arg % 2 == 0:
