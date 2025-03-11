@@ -1,20 +1,20 @@
 def slice_me(family: list, start: int, end: int) -> list:
     """
-    Slices a 2D array based on the given start and end indices.
-    
+    Slices a 2D array based on
+    the given start and end indices.
     Args:
         family (list): A 2D array (list of lists).
         start (int): The starting index for slicing.
         end (int): The ending index for slicing.
-    
     Returns:
         list: A sliced 2D array (list of lists).
-    
     Raises:
-        TypeError: If the input is not a valid list or if a row in the 2D array is not a list.
-        ValueError: If the rows are not of the same length or if the start and end indices are out of range.
+        TypeError: If the input is not a
+        valid list or if a row in the 2D array is not a list.
+        ValueError: If the rows are not of
+        the same length or if the start and end indices are out of range.
     """
-    if  not isinstance(family , list):
+    if not isinstance(family, list):
         raise TypeError("Input must be a list")
     if not all(isinstance(row, list) for row in family):
         raise TypeError("Each row in the 2D array must be a list")
