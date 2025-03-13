@@ -29,5 +29,5 @@ def slice_me(family: list, start: int, end: int) -> list:
     if start < 0 or end > len(family) or start > end:
         raise ValueError("Invalid slicing indices")
     sliced_family = family[start:end]
-    print(f"My new shape is : {len(sliced_family)}, {row_length}")
+    print(f"My new shape is : ({len(sliced_family)}, {row_length})")
     return sliced_family
